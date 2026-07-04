@@ -1823,7 +1823,7 @@ html,body{
     display:grid;
     grid-template-columns:1fr;
     gap:30px;
-    padding:20px;
+    padding:50px;
 }
 
 .card{
@@ -1834,6 +1834,7 @@ html,body{
 .card img{
     width:100%;
     height:auto;
+    
 }
 .cat{
     position: relative;
@@ -1862,7 +1863,7 @@ html,body{
 
 .blackbox{
     position:relative;
-    top:3490px;
+    top:3300px;
     height:auto;
     padding:35px 20px;
     display:flex;
@@ -1907,9 +1908,10 @@ html,body{
 
 .whitebox{
     position:relative;
-    top:3900px;
+    top:3700px;
     height:auto;
     padding:30px 20px;
+    
 }
 
 .whitebox p{
@@ -1922,7 +1924,7 @@ html,body{
 
 .trendpro{
     position:relative;
-    top:3890px;
+    top:3700px;
     margin-top:40px;
     text-align:center;
     left:50px;
@@ -2164,7 +2166,7 @@ html,body{
 
 .symbol{
     position:relative;
-    top:700px;
+    top:750px;
     width:100%;
     height:auto;
     display:flex;
@@ -2191,7 +2193,7 @@ html,body{
 
 .footer{
     position:relative;
-    top:670px;
+    top:770px;
     width:100%;
     height:auto;
     display:flex;
@@ -2238,7 +2240,7 @@ html,body{
 
 .footerline{
     position:relative;
-    top:670px;
+    top:770px;
     width:100%;
     height:auto;
     padding:30px 20px;
