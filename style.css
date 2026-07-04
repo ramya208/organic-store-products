@@ -1863,7 +1863,7 @@ html,body{
 
 .blackbox{
     position:relative;
-    top:3150px;
+    top:3080px;
     height:auto;
     padding:35px 20px;
     display:flex;
@@ -1874,7 +1874,7 @@ html,body{
 .blackbox p{
     position:static;
     text-align:center;
-    font-size:28px;
+    font-size:18px;
     line-height:40px;
     color:#fff;
 }
@@ -1899,7 +1899,7 @@ html,body{
 
 .newbutton i{
     margin-left:10px;
-    top:155px;
+    top:110px;
     left:130px;
     /* position: relative; */
 }
@@ -1908,7 +1908,7 @@ html,body{
 
 .whitebox{
     position:relative;
-    top:3550px;
+    top:3450px;
     height:auto;
     padding:30px 20px;
     
@@ -1924,7 +1924,7 @@ html,body{
 
 .trendpro{
     position:relative;
-    top:3600px;
+    top:3500px;
     margin-top:40px;
     text-align:center;
     left:50px;
