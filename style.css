@@ -1863,7 +1863,7 @@ html,body{
 
 .blackbox{
     position:relative;
-    top:3300px;
+    top:3150px;
     height:auto;
     padding:35px 20px;
     display:flex;
@@ -1908,7 +1908,7 @@ html,body{
 
 .whitebox{
     position:relative;
-    top:3700px;
+    top:3550px;
     height:auto;
     padding:30px 20px;
     
@@ -1924,7 +1924,7 @@ html,body{
 
 .trendpro{
     position:relative;
-    top:3700px;
+    top:3600px;
     margin-top:40px;
     text-align:center;
     left:50px;
@@ -2026,7 +2026,7 @@ html,body{
 
 .trends{
     position:relative;
-    top:100px;
+    top:150px;
     width:100%;
     display:grid;
     grid-template-columns:1fr;
@@ -2166,7 +2166,7 @@ html,body{
 
 .symbol{
     position:relative;
-    top:750px;
+    top:770px;
     width:100%;
     height:auto;
     display:flex;
