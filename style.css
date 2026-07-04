@@ -1762,7 +1762,7 @@ html,body{
 }
 
 .smallbox div{
-    width:90%;
+    width:100%;
     height:90px;
     position:static;
     left:0;
@@ -1841,7 +1841,7 @@ html,body{
   margin-top:10px;
   font-size:18px;
   text-align: center;
-  left:-50px;
+  left:-60px;
 }  
 
 .card h3{
@@ -1862,7 +1862,7 @@ html,body{
 
 .blackbox{
     position:relative;
-    top:3300px;
+    top:3490px;
     height:auto;
     padding:35px 20px;
     display:flex;
@@ -1892,18 +1892,22 @@ html,body{
     position:static;
     color:#fff;
     font-size:15px;
+    left:20px;
+    position: relative;
 }
 
 .newbutton i{
     margin-left:10px;
-    top:-2px;
+    top:155px;
+    left:130px;
+    /* position: relative; */
 }
 
 /* ---------- WHITE BOX ---------- */
 
 .whitebox{
     position:relative;
-    top:3720px;
+    top:3900px;
     height:auto;
     padding:30px 20px;
 }
@@ -1918,7 +1922,7 @@ html,body{
 
 .trendpro{
     position:relative;
-    top:3730px;
+    top:3890px;
     margin-top:40px;
     text-align:center;
     left:50px;
@@ -1986,7 +1990,7 @@ html,body{
 
 .items h3{
     font-size:26px;
-    left:-50px;
+    left:-30px;
 }
 
 .items p{
@@ -2008,11 +2012,11 @@ html,body{
 }
 
 .items button{
-    width:170px;
+    width:150px;
     height:50px;
     position:relative;
     margin-top:10px;
-    left:-80px;
+    left:-70px;
     top:-85px;
 }
 
@@ -2160,7 +2164,7 @@ html,body{
 
 .symbol{
     position:relative;
-    top:600px;
+    top:700px;
     width:100%;
     height:auto;
     display:flex;
@@ -2187,7 +2191,7 @@ html,body{
 
 .footer{
     position:relative;
-    top:650px;
+    top:670px;
     width:100%;
     height:auto;
     display:flex;
@@ -2234,7 +2238,7 @@ html,body{
 
 .footerline{
     position:relative;
-    top:650px;
+    top:670px;
     width:100%;
     height:auto;
     padding:30px 20px;
