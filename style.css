@@ -1864,7 +1864,7 @@ html,body{
 .blackbox{
     position:relative;
     top:3080px;
-    height:auto;
+    /* height:10px; */
     padding:35px 20px;
     display:flex;
     flex-direction:column;
@@ -1880,13 +1880,15 @@ html,body{
 }
 
 .newbutton{
-    position:static;
+    position:relative;
     width:180px;
     height:50px;
     margin-top:25px;
     display:flex;
     justify-content:center;
     align-items:center;
+    top:-25px;
+    left:-20px;
 }
 
 .newbutton p{
@@ -1908,7 +1910,7 @@ html,body{
 
 .whitebox{
     position:relative;
-    top:3450px;
+    top:3650px;
     height:auto;
     padding:30px 20px;
     
@@ -1924,7 +1926,7 @@ html,body{
 
 .trendpro{
     position:relative;
-    top:3500px;
+    top:3650px;
     margin-top:40px;
     text-align:center;
     left:50px;
@@ -2026,7 +2028,7 @@ html,body{
 
 .trends{
     position:relative;
-    top:150px;
+    top:250px;
     width:100%;
     display:grid;
     grid-template-columns:1fr;
