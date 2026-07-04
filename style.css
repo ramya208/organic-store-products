@@ -1926,7 +1926,7 @@ html,body{
 
 .trendpro{
     position:relative;
-    top:3650px;
+    top:3550px;
     margin-top:40px;
     text-align:center;
     left:50px;
@@ -2028,7 +2028,7 @@ html,body{
 
 .trends{
     position:relative;
-    top:250px;
+    top:100px;
     width:100%;
     display:grid;
     grid-template-columns:1fr;
