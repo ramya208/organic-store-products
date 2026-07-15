@@ -56,8 +56,63 @@
       href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css"
       rel="stylesheet"
     />
+     <link
+  href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+  rel="stylesheet"
+/>
   </head>
-  <body>
+  
+   <div class="overlay" id="signupOverlay">
+    <div class="popup">
+
+        <button class="close" onclick="showSignup()">×</button>
+        <!-- <button class="close" onclick="closeSignup()">×</button> -->
+         <button type="button" class="close" id="closeSignup">×</button>
+        <img src="./assets/organic-products-hero.png" alt="">
+
+        <h2>SIGN UP</h2>
+
+        <input type="text" id="name" placeholder="Enter your name">
+
+        <input type="email" id="email" placeholder="Enter your email">
+
+        <input type="password" id="password" placeholder="Create password">
+
+        <button class="login-btn" id="signupBtn">Sign Up</button>
+
+        <p>
+            Already have an account?
+          
+             <a href="#" id="showLoginLink">Login</a>
+        </p>
+</div>
+</div>
+<div class="overlay" id="loginOverlay" style="display: none;">
+    <div class="popup">
+      <!-- <button class="login-btn" id="loginBtn">Login</button> -->
+
+        <!-- <button class="close" onclick="closeLogin()">×</button> -->
+
+        <img src="./assets/organic-products-hero.png" alt="">
+
+        <h2>LOGIN</h2>
+
+        <input type="email" id="loginEmail" placeholder="Enter your email">
+
+        <input type="password" id="loginPassword" placeholder="Enter your password">
+
+        <!-- <button class="login-btn">Login</button> -->
+         <button class="login-btn" id="loginBtn">Login</button>
+
+        <p>
+            Don't have an account?
+            <a href="#" id="showSignupLink">Signup</a>
+        </p>
+
+    </div>
+</div>
+    
+ 
     <div class="nav">
       <div class="subnav">
         <img src="./assets/organic-store-logo5.svg" />
@@ -67,15 +122,35 @@
           <p>Groceries</p>
           <p>Juice</p>
           <p>Contact</p>
+          
 
           <div class="values">
+             <!-- <i class="ri-menu-line" id="menuIcon"></i> -->
             <i class="ri-shopping-cart-line"></i>
           </div>
+          <!-- <div class="cart-sidebar" id="cartSidebar">
+
+  <div class="cart-header">
+    <h2>Your cart is empty</h2>
+    <span id="closeCart">&times;</span>
+  </div>
+
+  <div class="cart-body">
+    <p>Check out our shop to see what's available</p>
+  </div>
+   <button class="shop-btn" id="shopNowBtn">
+    Your cart is empty.Shop Now →
+</button>
+</div> -->
+
 
           <i class="ri-user-fill"></i>
         </div>
       </div>
     </div>
+    
+  
+    
     <div class="home">
       <div class="box">
         <div class="left">
@@ -96,6 +171,7 @@
         </div>
       </div>
     </div>
+  
 
     <div class="smallbox">
       <!-- <i class="ri-ship-2-fill"></i> -->
@@ -279,6 +355,9 @@
       <img src="./assets/1-copy.svg" alt="image4" />
       <img src="./assets/1-copy.svg" alt="image5" />
     </div>
+
+
+    
     <div class="footer">
       <div class="footertext">
         <img src="./assets/organic-store-white-logo.png" />
@@ -335,5 +414,9 @@
     </div>
 
     </div> -->
+    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
+
+    
   </body>
 </html>
