@@ -105,19 +105,65 @@ document.getElementById("showSignupLink").addEventListener("click", (e) => {
 });
 
 const cartIcon = document.querySelector(".ri-shopping-cart-line");
-// const cartSidebar = document.getElementById("cartSidebar");
-// const closeCart = document.getElementById("closeCart");
+const cartSidebar = document.getElementById("cartSidebar");
+const closeCart = document.getElementById("closeCart");
 
 // cartIcon.addEventListener("click", () => {
 //     cartSidebar.classList.add("active");
 // });
-
-// closeCart.addEventListener("click", () => {
-//     cartSidebar.classList.remove("active");
-// });
-// const shopNowBtn = document.getElementById("shopNowBtn");
-
 cartIcon.addEventListener("click", () => {
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    if (cart.length === 0) {
+
+        // Empty cart
+        cartSidebar.classList.add("active");
+
+    } else {
+
+        // Product already added
+        window.location.href = "product.html";
+
+    }
+
+});
+closeCart.addEventListener("click", () => {
+    cartSidebar.classList.remove("active");
+});
+const shopNowBtn = document.getElementById("shopNowBtn");
+
+shopNowBtn.addEventListener("click", () => {
     window.location.href = "product.html";
 });
+window.addEventListener("load", () => {
 
+    const hideSignup = localStorage.getItem("hideSignup");
+
+    if (hideSignup === "true") {
+
+        document.getElementById("signupOverlay").style.display = "none";
+        document.getElementById("loginOverlay").style.display = "none";
+
+        localStorage.removeItem("hideSignup");
+
+    } else {
+
+        document.getElementById("signupOverlay").style.display = "flex";
+
+    }
+
+});
+
+const cartCount = document.getElementById("cartCount");
+
+function updateCartCount() {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    if (cartCount) {
+        cartCount.innerText = cart.length;
+    }
+}
+
+// Page load
+updateCartCount();

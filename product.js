@@ -188,6 +188,13 @@ const cartbar = document.getElementById("cartbar");
 const cartItems = document.getElementById("cartItems");
 const closeCart = document.getElementById("closeCart");
 const cartIcon = document.querySelector(".ri-shopping-cart-line");
+const cartCount = document.getElementById("cartCount");
+
+function updateCartCount() {
+    if (cartCount) {
+        cartCount.innerText = cart.length;
+    }
+}
 
 // Load Cart from LocalStorage
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -229,6 +236,8 @@ buttons.forEach(button => {
         saveCart();
 
         displayCart();
+
+        updateCartCount();
 
         cartbar.classList.add("active");
 
@@ -291,6 +300,7 @@ function displayCart() {
 // Cart Open
 cartIcon.addEventListener("click", () => {
     displayCart();
+    
     cartbar.classList.add("active");
 });
 
@@ -301,6 +311,7 @@ closeCart.addEventListener("click", () => {
 
 // Page Load
 displayCart();
+updateCartCount();
 
 // Events (Plus / Minus / Remove)
 cartItems.addEventListener("click", (e) => {
@@ -319,6 +330,8 @@ cartItems.addEventListener("click", (e) => {
 
         displayCart();
 
+        updateCartCount();
+
     }
 
     // Minus
@@ -331,6 +344,8 @@ cartItems.addEventListener("click", (e) => {
             saveCart();
 
             displayCart();
+
+            updateCartCount();
 
         }
 
@@ -345,6 +360,34 @@ cartItems.addEventListener("click", (e) => {
 
         displayCart();
 
+        updateCartCount();
+
     }
+
+});
+const placeOrderBtn = document.getElementById("placeOrderBtn");
+
+placeOrderBtn.addEventListener("click", () => {
+
+    if (cart.length === 0) {
+        alert("Your cart is empty!");
+        return;
+    }
+
+    alert("🎉 Order Placed Successfully!\nThank you for shopping with us.");
+setTimeout(() => {
+    localStorage.setItem("hideSignup", "true");
+window.location.href = "index.html";
+}, 1000);
+    // Cart clear
+    cart = [];
+
+    saveCart();
+
+    displayCart();
+
+    updateCartCount();
+
+    cartbar.classList.remove("active");
 
 });
