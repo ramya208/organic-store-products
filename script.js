@@ -295,3 +295,8 @@ window.addEventListener("DOMContentLoaded", () => {
 window.addEventListener("storage", () => {
     updateCartCount();
 });
+const shopNow = document.getElementById("shopNow");
+
+shopNow.addEventListener("click", () => {
+    window.location.href = "product.html";
+});
