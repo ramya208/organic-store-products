@@ -111,19 +111,40 @@ const closeCart = document.getElementById("closeCart");
 // cartIcon.addEventListener("click", () => {
 //     cartSidebar.classList.add("active");
 // });
+// cartIcon.addEventListener("click", () => {
+
+//     let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+//     if (cart.length === 0) {
+
+//         // Empty cart
+//         cartSidebar.classList.add("active");
+
+//     } else {
+
+//         // Product already added
+//         window.location.href = "product.html";
+
+//     }
+
+// });
 cartIcon.addEventListener("click", () => {
 
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    cartSidebar.classList.add("active");
 
     if (cart.length === 0) {
 
-        // Empty cart
-        cartSidebar.classList.add("active");
+        document.getElementById("cartItems").innerHTML =
+            "<p style='padding:20px'>Your cart is empty</p>";
+
+        document.getElementById("subtotal").innerText = "₹0";
+        document.getElementById("total").innerText = "₹0";
 
     } else {
 
-        // Product already added
-        window.location.href = "product.html";
+        displayCart();
 
     }
 
@@ -167,3 +188,104 @@ function updateCartCount() {
 
 // Page load
 updateCartCount();
+function displayCart() {
+
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    const cartItems = document.getElementById("cartItems");
+
+    let subtotal = 0;
+
+    cartItems.innerHTML = "";
+
+    cart.forEach((product) => {
+
+        subtotal += product.price * product.quantity;
+
+        const item = document.createElement("div");
+
+        item.classList.add("cart-item");
+
+        item.innerHTML = `
+            <img src="${product.image}" width="60">
+
+            <div class="details">
+
+                <h4>${product.name}</h4>
+
+                <p>₹${product.price}</p>
+
+                <div class="quantity-box">
+                    <button class="minus">-</button>
+                    <span class="qty">${product.quantity}</span>
+                    <button class="plus">+</button>
+                </div>
+
+                <h4>
+                    Total : ₹
+                    <span class="total">
+                        ${product.price * product.quantity}
+                    </span>
+                </h4>
+
+                <p class="remove">Remove</p>
+
+            </div>
+        `;
+
+        cartItems.appendChild(item);
+
+    });
+
+    document.getElementById("subtotal").innerText = "₹" + subtotal;
+    document.getElementById("total").innerText = "₹" + subtotal;
+
+}
+const cartItems = document.getElementById("cartItems");
+
+cartItems.addEventListener("click", (e) => {
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    const cartItem = e.target.closest(".cart-item");
+    if (!cartItem) return;
+
+    const index = [...cartItems.children].indexOf(cartItem);
+
+    // Plus
+    if (e.target.classList.contains("plus")) {
+
+        cart[index].quantity++;
+
+    }
+
+    // Minus
+    if (e.target.classList.contains("minus")) {
+
+        if (cart[index].quantity > 1) {
+            cart[index].quantity--;
+        }
+
+    }
+
+    // Remove
+    if (e.target.classList.contains("remove")) {
+
+        cart.splice(index, 1);
+
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    updateCartCount();
+
+    displayCart();
+
+});
+const profileIcon = document.getElementById("profileIcon");
+profileIcon.addEventListener("click", () => {
+
+    document.getElementById("signupOverlay").style.display = "flex";
+    document.getElementById("loginOverlay").style.display = "none";
+
+});

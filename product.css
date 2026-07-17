@@ -350,6 +350,21 @@ font-family: "Open Sans", sans-serif ;
 .card button:hover {
     background: #4f7c2b;
 }
+#cartCount{
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background: red;
+    color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    font-weight: bold;
+}
 
 /* Tablet */
 @media (max-width: 1200px) {

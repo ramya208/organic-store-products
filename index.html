@@ -129,7 +129,7 @@
             <i class="ri-shopping-cart-line"></i>
              <span id="cartCount">0</span>
           </div>
-          <div class="cart-sidebar" id="cartSidebar">
+          <!-- <div class="cart-sidebar" id="cartSidebar">
 
   <div class="cart-header">
     <h2>Your cart is empty</h2>
@@ -142,10 +142,38 @@
    <button class="shop-btn" id="shopNowBtn">
     Your cart is empty.Shop Now →
 </button>
+</div> -->
+<div class="cart-sidebar" id="cartSidebar">
+
+    <div class="cart-header">
+        <h2>Shopping Cart</h2>
+        <span id="closeCart">&times;</span>
+    </div>
+
+    <div id="cartItems"></div>
+
+    <div class="cart-summary">
+
+        <div class="summary-row">
+            <span>Subtotal</span>
+            <span id="subtotal">₹0</span>
+        </div>
+
+        <div class="summary-row">
+            <span>Total</span>
+            <span id="total">₹0</span>
+        </div>
+
+    </div>
+
+    <button class="shop-btn" id="shopNowBtn">
+        Shop Now
+    </button>
+
 </div>
 
 
-          <i class="ri-user-fill"></i>
+          <i class="ri-user-fill" id="profileIcon"></i>></i>
         </div>
       </div>
     </div>
