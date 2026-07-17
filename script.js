@@ -289,3 +289,9 @@ profileIcon.addEventListener("click", () => {
     document.getElementById("loginOverlay").style.display = "none";
 
 });
+window.addEventListener("DOMContentLoaded", () => {
+    updateCartCount();
+});
+window.addEventListener("storage", () => {
+    updateCartCount();
+});
